@@ -72,24 +72,32 @@ public static class LoadTestCommand
         using var directory = DirectoryFactory.Create(path);
         using var analyzer = AnalyzerFactory.Create();
         using var reader = DirectoryReader.Open(directory);
-        var searcherManager = new IndexSearcher(reader);
+        var searcherManager = new SearcherManager(directory, null);
 
-        const int iterations = 1_000_000;
+        const int iterations = 100_000;
         Console.WriteLine($"Starting load test of {iterations} iterations");
 
         var stopwatch = Stopwatch.StartNew();
         var productHits = new ConcurrentDictionary<int, int>();
 
-        Parallel.For(0, 1_000_000, i =>
+        Parallel.For(0, iterations, i =>
         {
             var queryParser = new QueryParser(LuceneVersion.LUCENE_48, "Name", analyzer);
             var query = queryParser.Parse(_queries[i % _queries.Length]);
-            var topDocs = searcherManager.Search(query, 100);
-
-            foreach (var scoreDoc in topDocs.ScoreDocs)
+            var searcher = searcherManager.Acquire();
+            try
             {
-                var doc = searcherManager.Doc(scoreDoc.Doc);
-                productHits.AddOrUpdate(int.Parse(doc.Get("ProductID")), 1, (_, count) => count + 1);
+                var topDocs = searcher.Search(query, 100);
+
+                foreach (var scoreDoc in topDocs.ScoreDocs)
+                {
+                    var doc = searcher.Doc(scoreDoc.Doc);
+                    productHits.AddOrUpdate(int.Parse(doc.Get("ProductID")), 1, (_, count) => count + 1);
+                }
+            }
+            finally
+            {
+                searcherManager.Release(searcher);
             }
         });
 
