@@ -3,7 +3,7 @@ using System.Diagnostics;
 using Lucene.Net.QueryParsers.Classic;
 using Lucene.Net.Search;
 using Lucene.Net.Util;
-using LuceneAdventureWorks.Search;
+using LuceneAdventureWorks.Common.Search;
 
 namespace LuceneAdventureWorks;
 

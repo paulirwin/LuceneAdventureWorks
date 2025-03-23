@@ -2,7 +2,7 @@ using Lucene.Net.Analysis;
 using Lucene.Net.Analysis.Standard;
 using Lucene.Net.Util;
 
-namespace LuceneAdventureWorks.Search;
+namespace LuceneAdventureWorks.Common.Search;
 
 public static class AnalyzerFactory
 {

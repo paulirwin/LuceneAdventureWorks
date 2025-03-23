@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace LuceneAdventureWorks.Data;
+namespace LuceneAdventureWorks.Indexer.Data;
 
 [Table("Product", Schema = "Production")]
 public class Product

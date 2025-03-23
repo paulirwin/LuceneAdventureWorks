@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace LuceneAdventureWorks.Data;
+namespace LuceneAdventureWorks.Indexer.Data;
 
 public class AdventureWorksDbContext(DbContextOptions options) : DbContext(options)
 {

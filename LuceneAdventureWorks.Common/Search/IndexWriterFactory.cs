@@ -3,7 +3,7 @@ using Lucene.Net.Index;
 using Lucene.Net.Util;
 using Directory = Lucene.Net.Store.Directory;
 
-namespace LuceneAdventureWorks.Search;
+namespace LuceneAdventureWorks.Common.Search;
 
 public static class IndexWriterFactory
 {

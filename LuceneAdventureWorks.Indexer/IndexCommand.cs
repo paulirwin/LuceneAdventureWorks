@@ -1,8 +1,8 @@
 using Lucene.Net.Documents;
-using LuceneAdventureWorks.Data;
-using LuceneAdventureWorks.Search;
+using LuceneAdventureWorks.Common.Search;
+using LuceneAdventureWorks.Indexer.Data;
 
-namespace LuceneAdventureWorks;
+namespace LuceneAdventureWorks.Indexer;
 
 public static class IndexCommand
 {

@@ -1,4 +1,5 @@
 ﻿using LuceneAdventureWorks;
+using LuceneAdventureWorks.Indexer;
 
 if (args.Length == 0)
 {
@@ -6,8 +7,7 @@ if (args.Length == 0)
     Console.WriteLine("  LuceneAdventureWorks <command> [options]");
     Console.WriteLine();
     Console.WriteLine("Commands:");
-    Console.WriteLine("  loadtest     Load test the index");
-    Console.WriteLine("  search       Search the index");
+    Console.WriteLine("  index        Index the AdventureWorks database");
     Console.WriteLine();
     Console.WriteLine("Options:");
     Console.WriteLine("  -p <path>    The path to the index directory");
@@ -29,13 +29,9 @@ if (!Directory.Exists(path))
     Directory.CreateDirectory(path);
 }
 
-if (args[0] == "loadtest")
+if (args[0] == "index")
 {
-    LoadTestCommand.Run(path);
-}
-else if (args[0] == "search")
-{
-    SearchCommand.Run(path);
+    IndexCommand.Run(path);
 }
 else
 {

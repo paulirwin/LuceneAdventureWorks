@@ -1,7 +1,7 @@
 using Lucene.Net.Store;
 using Directory = Lucene.Net.Store.Directory;
 
-namespace LuceneAdventureWorks.Search;
+namespace LuceneAdventureWorks.Common.Search;
 
 public static class DirectoryFactory
 {

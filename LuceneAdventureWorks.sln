@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuceneAdventureWorks", "LuceneAdventureWorks\LuceneAdventureWorks.csproj", "{7B4BDDC8-391A-4254-B3B1-45418AE12CEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuceneAdventureWorks.Indexer", "LuceneAdventureWorks.Indexer\LuceneAdventureWorks.Indexer.csproj", "{F78C4BB6-81DA-4211-83EC-0BA8CB3E80BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuceneAdventureWorks.Common", "LuceneAdventureWorks.Common\LuceneAdventureWorks.Common.csproj", "{64BD6F3F-1093-4B1D-9EEB-D9BF81313E39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{7B4BDDC8-391A-4254-B3B1-45418AE12CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B4BDDC8-391A-4254-B3B1-45418AE12CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B4BDDC8-391A-4254-B3B1-45418AE12CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F78C4BB6-81DA-4211-83EC-0BA8CB3E80BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F78C4BB6-81DA-4211-83EC-0BA8CB3E80BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F78C4BB6-81DA-4211-83EC-0BA8CB3E80BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F78C4BB6-81DA-4211-83EC-0BA8CB3E80BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64BD6F3F-1093-4B1D-9EEB-D9BF81313E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64BD6F3F-1093-4B1D-9EEB-D9BF81313E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64BD6F3F-1093-4B1D-9EEB-D9BF81313E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64BD6F3F-1093-4B1D-9EEB-D9BF81313E39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
