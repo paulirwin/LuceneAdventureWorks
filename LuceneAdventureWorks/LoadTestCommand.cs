@@ -1,7 +1,5 @@
 using System.Collections.Concurrent;
 using System.Diagnostics;
-using Lucene.Net.Documents;
-using Lucene.Net.Index;
 using Lucene.Net.QueryParsers.Classic;
 using Lucene.Net.Search;
 using Lucene.Net.Util;
@@ -71,7 +69,6 @@ public static class LoadTestCommand
     {
         using var directory = DirectoryFactory.Create(path);
         using var analyzer = AnalyzerFactory.Create();
-        using var reader = DirectoryReader.Open(directory);
         var searcherManager = new SearcherManager(directory, null);
 
         const int iterations = 100_000;
